@@ -10,7 +10,10 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://personal-finance-tracker-frontend-meir.onrender.com',
+  credentials: true
+}));
 app.use(express.json());
 
 
